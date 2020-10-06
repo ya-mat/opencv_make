@@ -34,6 +34,6 @@ cmake -D BUILD_JPEG=ON \
 make -j $(nproc) && \
 make install && \
 cd ../../ && \
-cp -r opencv-4.4.0/build_install/lib/ ./ && \
+cp -r opencv-4.4.0/build/build_install/lib/ ./ && \
 mkdir include && \
-cp -r opencv-4.4.0/build_install/include/opencv4 ./include/
+cp -r opencv-4.4.0/build/build_install/include/opencv4 ./include/
