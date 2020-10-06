@@ -21,18 +21,19 @@ mkdir build && \
 cd build && \
 wget https://github.com/opencv/opencv_contrib/archive/4.4.0.zip && \
 unzip 4.4.0.zip && \
+mkdir build_install && \
 cmake -D BUILD_JPEG=ON \
       -D BUILD_PNG=ON \
       -D BUILD_SHARED_LIBS=OFF \
       -D BUILD_TIFF=ON \
       -D CMAKE_BUILD_TYPE=Release \
-      -D CMAKE_INSTALL_PREFIX=./ \
+      -D CMAKE_INSTALL_PREFIX=./build_install \
       -D OPENCV_EXTRA_MODULES_PATH=./opencv_contrib-4.4.0/modules \
       -D WITH_OPENMP=ON \
       .. && \
 make -j $(nproc) && \
 make install && \
 cd ../../ && \
-cp -r opencv-4.4.0/build/lib/ ./ && \
+cp -r opencv-4.4.0/build_install/lib/ ./ && \
 mkdir include && \
-cp -r opencv-4.4.0/build/include/opencv4 ./include/
+cp -r opencv-4.4.0/build_install/include/opencv4 ./include/
