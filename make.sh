@@ -32,7 +32,7 @@ cmake -D BUILD_JPEG=ON \
       -D OPENCV_EXTRA_MODULES_PATH=./opencv_contrib-4.5.0/modules \
       -D WITH_OPENMP=ON \
       .. && \
-make -j $(nproc) && \
+make && \
 make install && \
 cd ../../ && \
 cp -r opencv-4.5.0/build/build_install/lib/ ./ && \
