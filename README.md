@@ -1,6 +1,6 @@
 # opencv_make
 
-This is the shell script to make libraries of OpenCV-4.4.0 using g++.
+This is the shell script to make libraries of OpenCV-4.5.0 using g++.
 
 ## How to use
 
