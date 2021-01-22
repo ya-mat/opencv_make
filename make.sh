@@ -14,14 +14,14 @@
 #tar zxvf eigen-3.3.8.tar.gz && \
 #cp -r eigen-3.3.8/Eigen ./
 
-# OpenCV-4.5.0
-wget https://github.com/opencv/opencv/archive/4.5.0.zip && \
-unzip 4.5.0.zip && \
-cd opencv-4.5.0/ && \
+# OpenCV-4.5.1
+wget https://github.com/opencv/opencv/archive/4.5.1.zip && \
+unzip 4.5.1.zip && \
+cd opencv-4.5.1/ && \
 mkdir build && \
 cd build && \
-wget https://github.com/opencv/opencv_contrib/archive/4.5.0.zip && \
-unzip 4.5.0.zip && \
+wget https://github.com/opencv/opencv_contrib/archive/4.5.1.zip && \
+unzip 4.5.1.zip && \
 mkdir build_install && \
 cmake -D BUILD_JPEG=ON \
       -D BUILD_PNG=ON \
@@ -29,12 +29,12 @@ cmake -D BUILD_JPEG=ON \
       -D BUILD_TIFF=ON \
       -D CMAKE_BUILD_TYPE=Release \
       -D CMAKE_INSTALL_PREFIX=./build_install \
-      -D OPENCV_EXTRA_MODULES_PATH=./opencv_contrib-4.5.0/modules \
+      -D OPENCV_EXTRA_MODULES_PATH=./opencv_contrib-4.5.1/modules \
       -D WITH_OPENMP=ON \
       .. && \
 make && \
 make install && \
 cd ../../ && \
-cp -r opencv-4.5.0/build/build_install/lib/ ./ && \
+cp -r opencv-4.5.1/build/build_install/lib/ ./ && \
 mkdir include && \
-cp -r opencv-4.5.0/build/build_install/include/opencv4 ./include/
+cp -r opencv-4.5.1/build/build_install/include/opencv4 ./include/
